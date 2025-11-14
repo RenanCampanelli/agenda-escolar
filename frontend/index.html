@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agenda Escolar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>Agenda Escolar</h1>
+    <p class="subtitle">Organize provas, trabalhos e estudos com um visual simples e aconchegante.</p>
+
+    <section class="form-section">
+      <h2>Nova tarefa</h2>
+      <form id="form-tarefa">
+        <label>
+          Título
+          <input type="text" id="titulo" required />
+        </label>
+
+        <label>
+          Data
+          <input type="date" id="data" required />
+        </label>
+
+        <label>
+          Tipo
+          <select id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="prova">Prova</option>
+            <option value="trabalho">Trabalho</option>
+            <option value="estudo">Estudo</option>
+          </select>
+        </label>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-card">
+        <div class="stats-label">Total</div>
+        <div class="stats-value" id="total">0</div>
+      </div>
+      <div class="stats-card">
+        <div class="stats-label">Concluídas</div>
+        <div class="stats-value" id="concluidas">0</div>
+      </div>
+      <div class="stats-card">
+        <div class="stats-label">Pendentes</div>
+        <div class="stats-value" id="pendentes">0</div>
+      </div>
+    </section>
+
+    <section class="lista-section">
+      <h2>Tarefas</h2>
+      <ul id="lista-tarefas"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
